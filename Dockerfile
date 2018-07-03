@@ -1,4 +1,5 @@
-FROM ubuntu:xenial
+ARG container_base
+FROM ubuntu:${container_base}
 
 ARG py_major
 ARG py_ver

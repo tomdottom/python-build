@@ -4,14 +4,25 @@ services:
     build:
       context: .
       args:
+        container_base: 16.04
         py_major:
         py_ver: 2.7.12-1~16.04
     image: tomdottom/python-build:2.7.12
 
-  python3:
+  python35:
     build:
       context: .
       args:
+        container_base: 16.04
         py_major: 3
         py_ver: 3.5.1-3
     image: tomdottom/python-build:3.5.1
+
+  python36:
+    build:
+      context: .
+      args:
+        container_base: 18.04
+        py_major: 3
+        py_ver: 3.6.5-3
+    image: tomdottom/python-build:3.6.5
