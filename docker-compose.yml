@@ -1,28 +1,51 @@
 version: '3'
 services:
-  python2:
+  python2.7.12:
     build:
       context: .
       args:
         container_base: 16.04
         py_major:
+        py_major_minor:
         py_ver: 2.7.12-1~16.04
     image: tomdottom/python-build:2.7.12
 
-  python35:
+  # python3.5.1:
+  #   build:
+  #     context: .
+  #     args:
+  #       container_base: 16.04
+  #       py_major: 3
+  #       py_major_minor: 3.5
+  #       py_ver: 3.5.1-10
+  #   image: tomdottom/python-build:3.5.1
+
+  python3.5.2:
     build:
       context: .
       args:
         container_base: 16.04
         py_major: 3
-        py_ver: 3.5.1-3
-    image: tomdottom/python-build:3.5.1
+        py_major_minor: 3.5
+        py_ver: 3.5.2-2ubuntu0~16.04.4
+    image: tomdottom/python-build:3.5.2
 
-  python36:
+  python3.6.5:
     build:
       context: .
       args:
         container_base: 18.04
         py_major: 3
+        py_major_minor: 3.6
         py_ver: 3.6.5-3
     image: tomdottom/python-build:3.6.5
+
+  python3.7.0:
+    build:
+      context: .
+      args:
+        container_base: 18.04
+        py_major: 3
+        py_major_minor: 3.7
+        py_ver: 3.7.0~b3-1
+    image: tomdottom/python-build:3.7.0
